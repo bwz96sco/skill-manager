@@ -1,0 +1,26 @@
+[project]
+name = "skill-manager"
+version = "0.1.0"
+description = "Local-first skill subscription, derivation, and advisory routing manager"
+readme = "README.md"
+authors = [
+    { name = "ZhangBowen", email = "bwz96sco@outlook.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+skill-manager = "skill_manager:main"
+skillmgr = "skill_manager:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
